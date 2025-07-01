@@ -126,19 +126,13 @@ claude --mcp-config ./claude_config.json \
     "development": {
       "command": "claude",
       "args": ["mcp", "serve"],
-      "cwd": ".../agents/development",
+      "cwd": "./agents/development",
       "env": {"CLAUDE_ROLE": "# 開発担当の役割 ..."}
     },
     ...
   }
 }
 ```
-
----
-
-## 注意事項
-- `.credentials` など機密情報は `.gitignore` で管理し、リポジトリに含めないでください
-- 回答・運用は日本語が前提です
 
 ---
 

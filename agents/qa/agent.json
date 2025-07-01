@@ -1,4 +1,7 @@
 {
   "command": "claude",
-  "args": ["mcp", "serve"]
+  "args": ["mcp", "serve"],
+  "env": {
+    "CLAUDE_CONFIG_DIR": "./"
+  }
 } 

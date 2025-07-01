@@ -31,8 +31,12 @@ def generate_config():
                     claude_role = f.read()
 
                 # Combine config
-                agent_config['cwd'] = f'./agents/{agent_name}'
-                agent_config['env'] = {'CLAUDE_ROLE': claude_role}
+                # agent.json 側の cwd を優先し、なければデフォルトを設定
+                agent_config['cwd'] = agent_config.get('cwd', f'./agents/{agent_name}')
+
+                # 既存のenvがあればマージし、CLAUDE_ROLEのみ上書き
+                existing_env = agent_config.get('env', {})
+                agent_config['env'] = {**existing_env, 'CLAUDE_ROLE': claude_role}
                 
                 config_data["mcpServers"][agent_name] = agent_config
                 print(f"Loaded config for agent: {agent_name}")
