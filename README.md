@@ -1,4 +1,4 @@
-# simple-multi-agent
+# multi-agent-simple
 
 このリポジトリは、複数のAIエージェントが協調して開発・運用・品質保証・セキュリティ管理を行う「シンプル」なマルチエージェント組織のサンプル実装です。
 
@@ -13,7 +13,7 @@
 
 ## ディレクトリ構成
 ```
-simple-multi-agent/
+multi-agent-simple/
 ├── agents/              # 各エージェントのプラグイン定義
 │   ├── development/     # 開発担当
 │   ├── qa/              # QA担当
